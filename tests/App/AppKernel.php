@@ -14,7 +14,7 @@ declare(strict_types=1);
 namespace Sonata\Twig\Tests\App;
 
 use Sonata\Doctrine\Bridge\Symfony\Bundle\SonataDoctrineBundle;
-use Sonata\Twig\Bridge\Symfony\SonataTwigBundle;
+use Sonata\Twig\Bridge\Symfony\SonataTwigSymfonyBundle;
 use Symfony\Bundle\FrameworkBundle\Controller\TemplateController;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
@@ -40,7 +40,7 @@ final class AppKernel extends Kernel
             new FrameworkBundle(),
             new TwigBundle(),
             new SonataDoctrineBundle(),
-            new SonataTwigBundle(),
+            new SonataTwigSymfonyBundle(),
         ];
     }
 
