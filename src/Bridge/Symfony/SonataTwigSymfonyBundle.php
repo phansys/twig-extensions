@@ -13,14 +13,7 @@ declare(strict_types=1);
 
 namespace Sonata\Twig\Bridge\Symfony;
 
-use Sonata\Twig\Bridge\Symfony\DependencyInjection\Compiler\StatusRendererCompilerPass;
-use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\HttpKernel\Bundle\Bundle;
-
-final class SonataTwigSymfonyBundle extends Bundle
-{
-    public function build(ContainerBuilder $container): void
-    {
-        $container->addCompilerPass(new StatusRendererCompilerPass());
-    }
-}
+// This file and its class alias is required in order to let Symfony Flex
+// autodiscovery to find the bundle.
+// The string "Symfony\Component\HttpKernel\Bundle\Bundle" must also be present.
+class_alias(SonataTwigBundle::class, __NAMESPACE__.'\SonataTwigSymfonyBundle');
